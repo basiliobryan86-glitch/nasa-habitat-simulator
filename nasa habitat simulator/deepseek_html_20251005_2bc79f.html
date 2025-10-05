@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA Habitat Simulator - Pixel Art Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER CON ESTILO NASA PIXEL ART -->
+        <header class="pixel-header">
+            <div class="nasa-logo">🚀 NASA</div>
+            <h1>HABITAT SIMULATOR</h1>
+            <div class="mission-badge">ARTEMIS PROGRAM</div>
+        </header>
+
+        <!-- PANEL DE CONFIGURACIÓN -->
+        <div class="config-panel pixel-border">
+            <h2>🎯 CONFIGURACIÓN DE MISIÓN</h2>
+            
+            <div class="config-grid">
+                <div class="config-item">
+                    <label>DESTINO:</label>
+                    <div class="pixel-buttons">
+                        <button class="pixel-btn active" data-destino="luna">🌙 LUNA</button>
+                        <button class="pixel-btn" data-destino="marte">🔴 MARTE</button>
+                    </div>
+                </div>
+                
+                <div class="config-item">
+                    <label>TRIPULACIÓN:</label>
+                    <div class="pixel-buttons">
+                        <button class="pixel-btn active" data-tripulantes="4">👥 4</button>
+                        <button class="pixel-btn" data-tripulantes="6">👥 6</button>
+                    </div>
+                </div>
+                
+                <div class="config-item">
+                    <label>DURACIÓN:</label>
+                    <div class="pixel-buttons">
+                        <button class="pixel-btn active" data-duracion="90">📅 90 DÍAS</button>
+                        <button class="pixel-btn" data-duracion="180">📅 180 DÍAS</button>
+                        <button class="pixel-btn" data-duracion="365">📅 365 DÍAS</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ÁREA PRINCIPAL DE DISEÑO -->
+        <div class="main-area">
+            <!-- PALETA DE MÓDULOS -->
+            <div class="modules-panel pixel-border">
+                <h2>🏗️ MÓDULOS DISPONIBLES</h2>
+                <div class="modules-grid" id="modulesGrid">
+                    <!-- Los módulos se cargan con JavaScript -->
+                </div>
+            </div>
+
+            <!-- ZONA DE DISEÑO DEL HÁBITAT -->
+            <div class="design-area pixel-border">
+                <h2>🏠 DISEÑO DEL HÁBITAT</h2>
+                <div class="habitat-grid" id="habitatGrid">
+                    <!-- Grid 20x20 para diseño pixel art -->
+                </div>
+                <div class="design-controls">
+                    <button class="pixel-btn danger" id="clearBtn">🗑️ LIMPIAR</button>
+                    <button class="pixel-btn success" id="validateBtn">✅ VALIDAR</button>
+                </div>
+            </div>
+
+            <!-- PANEL DE MÉTRICAS -->
+            <div class="metrics-panel pixel-border">
+                <h2>📊 MÉTRICAS NASA</h2>
+                <div class="metrics-display">
+                    <div class="metric">
+                        <span class="label">ÁREA USADA:</span>
+                        <span class="value" id="areaUsed">0 m²</span>
+                    </div>
+                    <div class="metric">
+                        <span class="label">ENERGÍA NETA:</span>
+                        <span class="value" id="energyNet">0 W</span>
+                    </div>
+                    <div class="metric">
+                        <span class="label">MASA TOTAL:</span>
+                        <span class="value" id="totalMass">0 kg</span>
+                    </div>
+                    <div class="metric">
+                        <span class="label">ESPACIO VITAL:</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="livingSpaceBar"></div>
+                        </div>
+                        <span class="value" id="livingSpace">0%</span>
+                    </div>
+                </div>
+                
+                <div class="validation-results" id="validationResults">
+                    <!-- Resultados de validación aparecen aquí -->
+                </div>
+            </div>
+        </div>
+
+        <!-- SIMULADOR DE ADVERSIDADES -->
+        <div class="simulator-panel pixel-border">
+            <h2>🌪️ SIMULADOR DE ADVERSIDADES</h2>
+            <div class="adversity-buttons" id="adversityButtons">
+                <!-- Botones de adversidades se cargan con JavaScript -->
+            </div>
+            <div class="simulation-result" id="simulationResult">
+                <!-- Resultado de simulación aparece aquí -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

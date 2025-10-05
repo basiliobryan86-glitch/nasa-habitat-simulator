@@ -1,0 +1,321 @@
+/* ESTILOS PIXEL ART NASA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background: #0a0a2a;
+    color: #00ff00;
+    line-height: 1.6;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* HEADER ESTILO NASA PIXEL ART */
+.pixel-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border: 4px solid #00ff00;
+    padding: 20px;
+    background: #000033;
+    position: relative;
+}
+
+.nasa-logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ff0000;
+    text-shadow: 2px 2px 0 #000;
+}
+
+.mission-badge {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: #ff0000;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    border: 2px solid #fff;
+}
+
+/* BORDES PIXEL ART */
+.pixel-border {
+    border: 4px solid #00ff00;
+    background: #001122;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* BOTONES PIXEL ART */
+.pixel-btn {
+    background: #003366;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    padding: 8px 16px;
+    margin: 5px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all 0.1s;
+    image-rendering: pixelated;
+}
+
+.pixel-btn:hover {
+    background: #004488;
+    transform: translateY(-2px);
+}
+
+.pixel-btn.active {
+    background: #00ff00;
+    color: #000;
+    font-weight: bold;
+}
+
+.pixel-btn.success {
+    background: #006600;
+    border-color: #00ff00;
+}
+
+.pixel-btn.danger {
+    background: #660000;
+    border-color: #ff0000;
+}
+
+/* CONFIGURACIÓN */
+.config-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.config-item label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #00ccff;
+}
+
+/* ÁREA PRINCIPAL */
+.main-area {
+    display: grid;
+    grid-template-columns: 250px 1fr 300px;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* PALETA DE MÓDULOS */
+.modules-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.module-item {
+    border: 2px solid #444;
+    padding: 10px;
+    cursor: grab;
+    background: #002244;
+    transition: all 0.2s;
+}
+
+.module-item:hover {
+    border-color: #00ff00;
+    background: #003366;
+}
+
+.module-icon {
+    width: 32px;
+    height: 32px;
+    background: #555;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    border: 2px solid #777;
+}
+
+/* ZONA DE DISEÑO */
+.habitat-grid {
+    display: grid;
+    grid-template-columns: repeat(20, 25px);
+    grid-template-rows: repeat(20, 25px);
+    gap: 1px;
+    background: #001133;
+    padding: 10px;
+    border: 2px solid #004466;
+    margin-bottom: 15px;
+}
+
+.grid-cell {
+    width: 25px;
+    height: 25px;
+    background: #002244;
+    border: 1px solid #003355;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.grid-cell:hover {
+    background: #003366;
+}
+
+.grid-cell.occupied {
+    border: 2px solid #00ff00;
+}
+
+/* MÓDULOS EN GRID - PIXEL ART */
+.module-dorm { background: #3366cc; }
+.module-lab { background: #cc3333; }
+.module-kitchen { background: #cc9933; }
+.module-bath { background: #33cc99; }
+.module-gym { background: #9933cc; }
+.module-solar { background: #ffcc00; }
+.module-battery { background: #666666; }
+.module-air { background: #33cccc; }
+.module-water { background: #3366ff; }
+.module-storage { background: #996633; }
+.module-shield { background: #ff3333; }
+.module-airlock { background: #cccccc; }
+
+/* MÉTRICAS */
+.metrics-display {
+    margin-top: 15px;
+}
+
+.metric {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 5px;
+    background: #001933;
+}
+
+.metric .label {
+    color: #00ccff;
+    font-weight: bold;
+}
+
+.metric .value {
+    color: #00ff00;
+    font-weight: bold;
+}
+
+.progress-bar {
+    width: 100px;
+    height: 12px;
+    background: #002244;
+    border: 1px solid #00ff00;
+    margin: 0 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #00ff00;
+    transition: width 0.3s;
+}
+
+/* VALIDACIONES */
+.validation-results {
+    margin-top: 15px;
+    padding: 10px;
+    background: #001933;
+    border: 2px solid #004466;
+}
+
+.validation-item {
+    padding: 5px;
+    margin: 5px 0;
+    border-left: 4px solid #ff0000;
+}
+
+.validation-item.valid {
+    border-left-color: #00ff00;
+}
+
+.validation-item.warning {
+    border-left-color: #ffff00;
+}
+
+/* SIMULADOR ADVERSIDADES */
+.adversity-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.adversity-btn {
+    background: #660000;
+    border-color: #ff3333;
+}
+
+.adversity-btn:hover {
+    background: #880000;
+}
+
+.simulation-result {
+    padding: 15px;
+    margin-top: 15px;
+    background: #001933;
+    border: 2px solid #004466;
+    min-height: 100px;
+}
+
+.result-success {
+    border-color: #00ff00;
+    background: #002200;
+}
+
+.result-failure {
+    border-color: #ff0000;
+    background: #220000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+    .main-area {
+        grid-template-columns: 1fr;
+    }
+    
+    .modules-panel {
+        order: 2;
+    }
+    
+    .design-area {
+        order: 1;
+    }
+    
+    .metrics-panel {
+        order: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .habitat-grid {
+        grid-template-columns: repeat(20, 20px);
+        grid-template-rows: repeat(20, 20px);
+    }
+    
+    .grid-cell {
+        width: 20px;
+        height: 20px;
+    }
+}
